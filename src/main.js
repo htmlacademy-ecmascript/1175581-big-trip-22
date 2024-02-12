@@ -7,7 +7,7 @@ import FilterModel from './model/filter-model.js';
 
 import { render } from './framework/render.js';
 
-const AUTHORIZATION = 'Basic kh34jhhd23fsvvxdfdcfdghikoheio3';
+const AUTHORIZATION = 'Basic kh3d4djhhd23fsfdfvfwfvxdfdcdfdghikoheio3';
 const END_POINT = 'https://22.objects.htmlacademy.pro/big-trip';
 
 const filtersElement = document.querySelector('.trip-controls__filters');

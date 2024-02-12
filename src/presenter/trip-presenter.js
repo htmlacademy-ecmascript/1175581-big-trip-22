@@ -175,7 +175,8 @@ export default class TripPresenter {
 
   #renderSort() {
     this.#sortComponent = new SortView({
-      onSortTypeChange: this.#handleSortTypeChange
+      onSortTypeChange: this.#handleSortTypeChange,
+      currentSortType: this.#currentSortType
     });
 
     render(this.#sortComponent, this.#eventsElement, RenderPosition.AFTERBEGIN);
@@ -240,7 +241,6 @@ export default class TripPresenter {
   }
 
   #renderBoard() {
-    this.#renderTripInfo();
     this.#renderSort();
     render(this.#eventsListComponent, this.#eventsElement);
 
@@ -252,6 +252,7 @@ export default class TripPresenter {
     if (this.events.length === 0) {
       this.#renderNoEvent();
     } else {
+      this.#renderTripInfo();
       this.#renderEvents();
     }
   }
